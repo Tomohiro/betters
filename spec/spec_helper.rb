@@ -1,3 +1,8 @@
+# Enable Coveralls
+# https://coveralls.zendesk.com/hc/en-us/articles/201769485-Ruby-Rails
+require 'coveralls'
+Coveralls.wear!('rails')
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.color = true
