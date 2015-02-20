@@ -1,0 +1,53 @@
+{
+  "name": "Betters",
+  "description": "Better Rails Base Project",
+  "keywords": ["rails"],
+  "website": "https://betters.herokuapp.com",
+  "repository": "https://github.com/Tomohiro/betters",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  },
+  "env": {
+    "APP_HOSST": {
+      "description": "Your app name on Heroku",
+      "value": "your-app"
+    },
+    "REDIS_URL": {
+      "description": "REDIS URL",
+      "value": "Copy from REDISCLOUD_URL"
+    },
+    "SMTP_DOMAIN": {
+      "description": "Mail sender's domain",
+      "value": "heroku.com"
+    },
+    "SMTP_HOST": {
+      "description": "SMTP server host",
+      "value": "smtp.sendgrid.com"
+    },
+    "SMTP_USERNAME": {
+      "description": "Sendgrid username",
+      "value": ""
+    },
+    "SMTP_PASSWORD": {
+      "description": "Sendgrid password",
+      "value": ""
+    },
+    "GITHUB_APP_ID": {
+      "description": "GitHub application ID",
+      "value": ""
+    },
+    "GITHUB_APP_SECRET": {
+      "description": "GitHub application secret",
+      "value": ""
+    },
+    "GITHUB_APP_SCOPE": {
+      "description": "GitHub application scope",
+      "value": ""
+    },
+  },
+  "addons": [
+    "heroku-postgres:hobby-dev",
+    "rediscloud:25",
+    "sendgrid:starter"
+  ]
+}
