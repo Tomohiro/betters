@@ -77,6 +77,9 @@ group :development do
   # Mutes assets pipeline log messages.
   gem 'quiet_assets'
 
+  # Format SQL and parameters in the Rails log.
+  gem 'rails-flog', require: 'flog'
+
   # Manage Procfile-based applications
   gem 'foreman'
 end
