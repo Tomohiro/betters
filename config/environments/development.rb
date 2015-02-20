@@ -57,4 +57,10 @@ Rails.application.configure do
     g.javascripts      false
     g.stylesheets      false
   end
+
+  # ruby on rails 4 - How to use Byebug with a remote process (e.g., pow) - Stack Overflow
+  # http://stackoverflow.com/questions/22794176/how-to-use-byebug-with-a-remote-process-e-g-pow
+  if ENV['RUBY_DEBUG_PORT']
+    Byebug.start_server 'localhost', ENV['RUBY_DEBUG_PORT'].to_i
+  end
 end
