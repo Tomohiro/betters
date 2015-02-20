@@ -80,6 +80,9 @@ group :development do
   # Format SQL and parameters in the Rails log.
   gem 'rails-flog', require: 'flog'
 
+  # Pritty print to Ruby objects on IRB, Pry.
+  gem 'awesome_print'
+
   # Manage Procfile-based applications
   gem 'foreman'
 end
