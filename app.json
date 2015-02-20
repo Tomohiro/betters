@@ -4,9 +4,12 @@
   "keywords": ["rails"],
   "website": "https://betters.herokuapp.com",
   "repository": "https://github.com/Tomohiro/betters",
-  "scripts": {
-    "postdeploy": "bundle exec rake db:setup"
-  },
+  "addons": [
+    "sendgrid:starter",
+    "heroku-postgresql:hobby-dev",
+    "deployhooks:http",
+    "rediscloud:25"
+  ],
   "env": {
     "APP_HOSST": {
       "description": "Your app name on Heroku",
@@ -43,11 +46,9 @@
     "GITHUB_APP_SCOPE": {
       "description": "GitHub application scope",
       "value": ""
-    },
+    }
   },
-  "addons": [
-    "heroku-postgres:hobby-dev",
-    "rediscloud:25",
-    "sendgrid:starter"
-  ]
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  }
 }
