@@ -48,6 +48,9 @@ end
 group :doc do
   # Documantation
   gem 'yard'
+
+  # `bundle exec rake erd` generates ERD ouput to erd.pdf
+  gem 'rails-erd'
 end
 
 group :development, :test do
@@ -71,8 +74,8 @@ group :development do
   gem 'better_errors'
   gem 'pry-rails'
 
-  # `bundle exec rake erd` generates ERD ouput to erd.pdf
-  gem 'rails-erd'
+  # Mutes assets pipeline log messages.
+  gem 'quiet_assets'
 
   # Manage Procfile-based applications
   gem 'foreman'
