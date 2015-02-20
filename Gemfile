@@ -71,6 +71,13 @@ group :development do
   # Rails Pry initializer
   gem 'pry-rails'
 
+  # Pritty print to Ruby objects on IRB, Pry.
+  gem 'awesome_print'
+
+  # A mini view framework for console/irb that's easy to use
+  gem 'hirb'
+  gem 'hirb-unicode' # Support unicode characters
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -82,9 +89,6 @@ group :development do
 
   # Format SQL and parameters in the Rails log.
   gem 'rails-flog', require: 'flog'
-
-  # Pritty print to Ruby objects on IRB, Pry.
-  gem 'awesome_print'
 
   # Manage Procfile-based applications
   gem 'foreman'

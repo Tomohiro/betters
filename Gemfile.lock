@@ -104,6 +104,10 @@ GEM
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
+    hirb (0.7.3)
+    hirb-unicode (0.0.5)
+      hirb (~> 0.5)
+      unicode-display_width (~> 0.1.1)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -284,6 +288,7 @@ GEM
     uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unicode-display_width (0.1.1)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.0.0)
@@ -308,6 +313,8 @@ DEPENDENCIES
   foreman
   haml-rails (~> 0.8)
   heroku-deflater
+  hirb
+  hirb-unicode
   omniauth (~> 1.2.2)
   omniauth-github (~> 1.1.2)
   pg
