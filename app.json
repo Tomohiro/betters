@@ -7,7 +7,6 @@
   "addons": [
     "sendgrid:starter",
     "heroku-postgresql:hobby-dev",
-    "deployhooks:http",
     "rediscloud:25"
   ],
   "env": {
