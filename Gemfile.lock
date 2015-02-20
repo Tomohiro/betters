@@ -99,6 +99,8 @@ GEM
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
     hashie (3.4.0)
+    heroku-deflater (0.5.3)
+      rack (>= 1.4.5)
     hike (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -298,6 +300,7 @@ DEPENDENCIES
   dotenv-rails
   foreman
   haml-rails (~> 0.8)
+  heroku-deflater
   omniauth (~> 1.2.2)
   omniauth-github (~> 1.1.2)
   pg

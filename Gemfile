@@ -89,4 +89,7 @@ end
 group :production do
   # Makes running your Rails app easier on Heroku
   gem 'rails_12factor'
+
+  # Enable gzip compression on heroku, but don't compress images.
+  gem 'heroku-deflater'
 end
