@@ -15,8 +15,9 @@
       "value": "your-app"
     },
     "REDIS_URL": {
-      "description": "REDIS URL",
-      "value": "Copy from REDISCLOUD_URL"
+      "description": "REDIS URL (If you not use Redis Cloud you should write this)",
+      "value": "",
+      "required": false
     },
     "SMTP_DOMAIN": {
       "description": "Mail sender's domain",
