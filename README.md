@@ -6,3 +6,8 @@ Betters [![Join the chat at https://gitter.im/Tomohiro/betters](https://badges.g
 [![Coverage Status](https://img.shields.io/coveralls/Tomohiro/betters.svg?style=flat-square)](https://coveralls.io/r/Tomohiro/betters)
 [![Code Climate](https://img.shields.io/codeclimate/github/Tomohiro/betters.svg?style=flat-square)](https://codeclimate.com/github/Tomohiro/betters)
 [![Inline docs](http://inch-ci.org/github/Tomohiro/betters.svg?branch=master&style=flat-square)](http://inch-ci.org/github/Tomohiro/betters)
+
+
+### Heroku Ready
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)

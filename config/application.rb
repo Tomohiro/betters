@@ -28,10 +28,10 @@ module Betters
 
     # Rails provides different stores for the cached data created by action and fragment caches.
     # http://guides.rubyonrails.org/caching_with_rails.html#cache-stores
-    config.cache_store = :redis_store, "#{ENV['REDIS_URL']}/1/cache",
+    config.cache_store = :redis_store, "#{ENV['REDISCLOUD_URL']}/1/cache",
       { expires_in: 90.minutes }
 
     # For session store.
-    config.session_store_servers = "#{ENV['REDIS_URL']}/0/session"
+    config.session_store_servers = "#{ENV['REDISCLOUD_URL']}/0/session"
   end
 end

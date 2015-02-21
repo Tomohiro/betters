@@ -1,0 +1,58 @@
+{
+  "name": "Betters",
+  "description": "Better Rails Base Project",
+  "keywords": ["rails"],
+  "website": "https://betters.herokuapp.com",
+  "repository": "https://github.com/Tomohiro/betters",
+  "addons": [
+    "sendgrid:starter",
+    "heroku-postgresql:hobby-dev",
+    "rediscloud:25"
+  ],
+  "env": {
+    "APP_HOST": {
+      "description": "Your app name on Heroku",
+      "value": "your-app"
+    },
+    "SMTP_DOMAIN": {
+      "description": "Mail sender's domain",
+      "value": "heroku.com"
+    },
+    "SMTP_HOST": {
+      "description": "SMTP server host (If you not use SendGrid you should change this)",
+      "value": "smtp.sendgrid.net"
+    },
+    "SMTP_PORT": {
+      "description": "SMTP server port (If you not use the Transmission Port you should change this)",
+      "value": "587"
+    },
+    "SMTP_USERNAME": {
+      "description": "SMTP username (If you not use SendGrid you should write this)",
+      "value": "",
+      "required": false
+    },
+    "SMTP_PASSWORD": {
+      "description": "SMTP password (If you not use SendGrid you should write this)",
+      "value": "",
+      "required": false
+    },
+    "GITHUB_APP_ID": {
+      "description": "GitHub application ID",
+      "value": "",
+      "required": false
+    },
+    "GITHUB_APP_SECRET": {
+      "description": "GitHub application secret",
+      "value": "",
+      "required": false
+    },
+    "GITHUB_APP_SCOPE": {
+      "description": "GitHub application scope",
+      "value": "",
+      "required": false
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  }
+}
