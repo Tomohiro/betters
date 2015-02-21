@@ -10,7 +10,7 @@
     "rediscloud:25"
   ],
   "env": {
-    "APP_HOSST": {
+    "APP_HOST": {
       "description": "Your app name on Heroku",
       "value": "your-app"
     },
@@ -23,28 +23,37 @@
       "value": "heroku.com"
     },
     "SMTP_HOST": {
-      "description": "SMTP server host",
+      "description": "SMTP server host (If you not use SendGrid you should change this)",
       "value": "smtp.sendgrid.com"
     },
+    "SMTP_PORT": {
+      "description": "SMTP server port (If you not use the Transmission Port you should change this)",
+      "value": "587"
+    },
     "SMTP_USERNAME": {
-      "description": "Sendgrid username",
-      "value": ""
+      "description": "SMTP username (If you not use SendGrid you should write this)",
+      "value": "",
+      "required": false
     },
     "SMTP_PASSWORD": {
-      "description": "Sendgrid password",
-      "value": ""
+      "description": "SMTP password (If you not use SendGrid you should write this)",
+      "value": "",
+      "required": false
     },
     "GITHUB_APP_ID": {
       "description": "GitHub application ID",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "GITHUB_APP_SECRET": {
       "description": "GitHub application secret",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "GITHUB_APP_SCOPE": {
       "description": "GitHub application scope",
-      "value": ""
+      "value": "",
+      "required": false
     }
   },
   "scripts": {

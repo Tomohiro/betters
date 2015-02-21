@@ -26,12 +26,14 @@ module Betters
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    redis_url = ENV['REDIS_URL'] || ENV['REDISCLOUD_URL'] || 'localhost'
+
     # Rails provides different stores for the cached data created by action and fragment caches.
     # http://guides.rubyonrails.org/caching_with_rails.html#cache-stores
-    config.cache_store = :redis_store, "#{ENV['REDIS_URL']}/1/cache",
+    config.cache_store = :redis_store, "#{redis_url}/1/cache",
       { expires_in: 90.minutes }
 
     # For session store.
-    config.session_store_servers = "#{ENV['REDIS_URL']}/0/session"
+    config.session_store_servers = "#{redis_url}/0/session"
   end
 end
