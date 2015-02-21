@@ -20,7 +20,7 @@
     },
     "SMTP_HOST": {
       "description": "SMTP server host (If you not use SendGrid you should change this)",
-      "value": "smtp.sendgrid.com"
+      "value": "smtp.sendgrid.net"
     },
     "SMTP_PORT": {
       "description": "SMTP server port (If you not use the Transmission Port you should change this)",
