@@ -1,3 +1,4 @@
+# User reperesents the User's domain
 class User < ActiveRecord::Base
   has_many :identities, dependent: :destroy
 
@@ -7,23 +8,34 @@ class User < ActiveRecord::Base
          :confirmable, :lockable, :timeoutable,
          :omniauthable, omniauth_providers: [:github]
 
-  def self.from_oauth(auth)
-    identity = Identity.from_oauth(auth)
+  def oauth_authenticated?
+    identities.present? && persisted?
+  end
 
-    user = identity.user
-    if user.nil?
+  class << self
+    def oauth_authenticate(auth)
+      identity = Identity.find_or_create_with_oauth(auth)
+
+      user = identity.user
+      if user.nil?
+        user = create_from_oauth(auth)
+
+        # Associate the identity with user
+        identity.user = user
+        identity.save!
+      end
+
+      user
+    end
+
+    def create_from_oauth(auth)
       user = User.new(
         email: auth.info.email,
         password: Devise.friendly_token[0, 20]
       )
       user.skip_confirmation!
       user.save!
-
-      # Associate the identity with user
-      identity.user = user
-      identity.save!
+      user
     end
-
-    user
   end
 end

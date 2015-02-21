@@ -1,3 +1,4 @@
+# Identity reporesents an user's OAuth identity
 class Identity < ActiveRecord::Base
   belongs_to :user
 
@@ -5,7 +6,7 @@ class Identity < ActiveRecord::Base
   validates :uid, uniqueness: { scope: :provider }
   validates :provider, presence: true
 
-  def self.from_oauth(auth)
+  def self.find_or_create_with_oauth(auth)
     find_or_create_by(uid: auth.uid, provider: auth.provider)
   end
 end
