@@ -74,8 +74,8 @@ Rails.application.configure do
     address:              ENV['SMTP_HOST'],
     port:                 ENV['SMTP_PORT'],
     domain:               ENV['SMTP_DOMAIN'],
-    user_name:            ENV['SMTP_USERNAME'] || ENV['SENDGRID_USERNAME'],
-    password:             ENV['SMTP_PASSWORD'] || ENV['SENDGRID_PASSWORD'],
+    user_name:            ENV['SMTP_USERNAME'].presence || ENV['SENDGRID_USERNAME'],
+    password:             ENV['SMTP_PASSWORD'].presence || ENV['SENDGRID_PASSWORD'],
     authentication:       :plain,
     enable_starttls_auto: true
   }
