@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe :Welcome do
+describe 'Landing page' do
   describe 'GET /' do
     it 'returns an index' do
       get '/'
