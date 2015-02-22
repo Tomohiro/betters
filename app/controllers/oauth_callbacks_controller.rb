@@ -1,5 +1,5 @@
 # OauthCallbacksController authrozes the user by OAuth providers
-class OauthCallbacksController < Devise::OmniauthCallbacksController
+class OAuthCallbacksController < Devise::OmniauthCallbacksController
   rescue_from ActiveRecord::RecordInvalid, with: :unauthorized
 
   def auth
