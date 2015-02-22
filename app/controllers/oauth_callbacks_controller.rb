@@ -17,7 +17,7 @@ class OAuthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  Devise.omniauth_providers.each do |provider|
+  User.omniauth_providers.each do |provider|
     alias_method provider, :authorize
   end
 
