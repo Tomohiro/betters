@@ -3,11 +3,11 @@ require 'rails_helper'
 describe User::OAuthAuthorizable do
   fixtures :users, :identities
 
-  # Create a OAuth provider's by OmniAuth::AuthHash
+  # Create an OAuth provider's hash by OmniAuth::AuthHash
   # Integration Testing intridea/omniauth Wiki
   # https://github.com/intridea/omniauth/wiki/Integration-Testing
   describe '.oauth_authorize' do
-    context 'with registered user and valid oauth hash' do
+    context 'with registered user and valid OAuth hash' do
       let(:valid_github_auth_hash) do
         OmniAuth::AuthHash.new(
           provider: 'github',

@@ -1,4 +1,4 @@
-# User reperesents the User's domain
+# User represents an user's domain
 class User < ActiveRecord::Base
   has_many :identities, dependent: :destroy
 

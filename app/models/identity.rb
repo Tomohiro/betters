@@ -1,4 +1,4 @@
-# Identity reporesents an user's OAuth identity
+# Identity represents an user's OAuth identity
 class Identity < ActiveRecord::Base
   belongs_to :user
 
