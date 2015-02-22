@@ -46,6 +46,15 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootswatch'
 end
 
+# Take a peek into Rails application.
+gem 'peek'
+gem 'peek-git'
+gem 'peek-performance_bar'
+gem 'peek-pg'
+gem 'peek-redis'
+gem 'peek-gc'
+gem 'peek-rblineprof'
+
 group :doc do
   # Documantation
   gem 'yard'
@@ -90,15 +99,6 @@ group :development do
 
   # Format SQL and parameters in the Rails log.
   gem 'rails-flog', require: 'flog'
-
-  # Take a peek into Rails application.
-  gem 'peek'
-  gem 'peek-git'
-  gem 'peek-performance_bar'
-  gem 'peek-pg'
-  gem 'peek-redis'
-  gem 'peek-gc'
-  gem 'peek-rblineprof'
 
   # Manage Procfile-based applications
   gem 'foreman'
