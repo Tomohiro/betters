@@ -9,8 +9,10 @@
 #   inflect.irregular 'person', 'people'
 #   inflect.uncountable %w( fish sheep )
 # end
-
-# These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+#
+# For more information:
+#   ActiveSupport::Inflector::Inflections
+#   http://api.rubyonrails.org/classes/ActiveSupport/Inflector/Inflections.html#method-i-acronym
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.acronym 'OAuth'
+end
