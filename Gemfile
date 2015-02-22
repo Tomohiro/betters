@@ -19,6 +19,7 @@ gem 'devise', '~> 3.4'
 # Support OAuth providers
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-github', '~> 1.1.2'
+gem 'omniauth-facebook', '~> 2.0.0'
 
 # Internationalization
 gem 'rails-i18n',  '~> 4.0.0'

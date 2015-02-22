@@ -50,6 +50,21 @@
       "description": "GitHub application scope",
       "value": "",
       "required": false
+    },
+    "FACEBOOK_APP_ID": {
+      "description": "Facebook application ID",
+      "value": "",
+      "required": false
+    },
+    "FACEBOOK_APP_SECRET": {
+      "description": "Facebook application secret",
+      "value": "",
+      "required": false
+    },
+    "FACEBOOK_APP_SCOPE": {
+      "description": "Facebook application scope",
+      "value": "",
+      "required": false
     }
   },
   "scripts": {
