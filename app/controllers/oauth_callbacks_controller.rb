@@ -10,7 +10,7 @@ class OAuthCallbacksController < Devise::OmniauthCallbacksController
     provider = auth.provider
 
     user = User.oauth_authorize(auth)
-    if user.oauth_authorized?
+    if user.oauth_authorized?(provider)
       authorized(user, provider)
     else
       unauthorized(provider)

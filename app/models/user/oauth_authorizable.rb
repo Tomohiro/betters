@@ -3,10 +3,6 @@ class User
   module OAuthAuthorizable
     extend ActiveSupport::Concern
 
-    def oauth_authorized?
-      identities.present? && persisted?
-    end
-
     # ClassMethods defines OAuth authorization processes
     module ClassMethods
       def oauth_authorize(auth)
@@ -31,6 +27,10 @@ class User
       def dummy_password
         Devise.friendly_token[0, 20]
       end
+    end
+
+    def oauth_authorized?(provider)
+      identities.find_by(provider: provider).present? && persisted?
     end
   end
 end
