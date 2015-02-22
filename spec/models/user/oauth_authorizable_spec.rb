@@ -3,8 +3,11 @@ require 'rails_helper'
 describe User::OAuthAuthorizable do
   fixtures :users, :identities
 
+  # Create a OAuth provider's by OmniAuth::AuthHash
+  # Integration Testing intridea/omniauth Wiki
+  # https://github.com/intridea/omniauth/wiki/Integration-Testing
   describe '.oauth_authorize' do
-    context 'with valid oauth hash' do
+    context 'with already exists user and valid oauth hash' do
       let(:valid_github_auth_hash) do
         OmniAuth::AuthHash.new(
           provider: 'github',
@@ -22,6 +25,26 @@ describe User::OAuthAuthorizable do
       end
     end
 
+    context 'with not exists user and valid oauth hash' do
+      let(:dummy_provider_auth_hash) do
+        OmniAuth::AuthHash.new(
+          provider: 'dummy_provider',
+          uid: 'NEW_USER_DUMMY_PROVIDER_UID',
+          info: { email: 'new_user@example.com' }
+        )
+      end
+
+      subject { User.oauth_authorize(dummy_provider_auth_hash) }
+
+      it 'creates a user from OAuth hash' do
+        expect(subject.persisted?).to be true
+      end
+
+      it 'has identities' do
+        expect(subject.identities.present?).to be true
+      end
+    end
+
     context 'with invalid oauth hash' do
       let(:invalid_github_auth_hash) do
         OmniAuth::AuthHash.new(
@@ -36,27 +59,6 @@ describe User::OAuthAuthorizable do
       it 'was failed to authorize the user' do
         expect { subject }.to raise_error(ActiveRecord::RecordInvalid)
       end
-    end
-  end
-
-  describe '.create_from_oauth' do
-    let(:dummy_provider_auth_hash) do
-      OmniAuth::AuthHash.new(
-        provider: 'dummy_provider',
-        uid: 'NEW_USER_DUMMY_PROVIDER_UID',
-        info: { email: 'new_user@example.com' }
-      )
-    end
-
-    it 'creates a user from OAuth hash' do
-      created_user = User.create_from_oauth(dummy_provider_auth_hash)
-      expect(created_user.persisted?).to be true
-    end
-  end
-
-  describe '.dummy_password' do
-    it 'generates dummy password' do
-      expect(User.dummy_password.length).to eq 20
     end
   end
 
