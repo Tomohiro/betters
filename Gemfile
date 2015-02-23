@@ -117,5 +117,5 @@ group :production do
   gem 'heroku-deflater'
 
   # Management performance of Rails application
-  gem 'newrelic_rpm'
+  gem 'newrelic_rpm', require: false
 end
