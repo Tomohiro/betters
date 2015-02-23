@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/Tomohiro/puma.git
+  revision: 542919771a249dbccda37c7fd636025c22778a06
+  branch: newrelic-dispatcher-default-update
+  specs:
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -180,8 +188,6 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
-    puma (2.11.1)
-      rack (>= 1.1, < 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
@@ -355,7 +361,7 @@ DEPENDENCIES
   peek-redis
   pg
   pry-rails
-  puma
+  puma!
   quiet_assets
   rails (= 4.2.0)
   rails-assets-bootswatch!
