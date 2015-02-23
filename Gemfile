@@ -115,4 +115,7 @@ group :production do
 
   # Enable gzip compression on heroku, but don't compress images.
   gem 'heroku-deflater'
+
+  # Management performance of Rails application
+  gem 'newrelic_rpm'
 end
