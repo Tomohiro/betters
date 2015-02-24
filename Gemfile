@@ -42,8 +42,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-jquery'
   gem 'rails-assets-jquery-ujs'
 
-  # Bootstrap themes
-  gem 'rails-assets-bootswatch'
+  # UI frameworks
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-fontawesome'
 end
 
 # Take a peek into Rails application.
