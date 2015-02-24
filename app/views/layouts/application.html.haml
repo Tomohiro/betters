@@ -2,24 +2,12 @@
 %html
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Betters
+    %title= t('app.site.title')
     = stylesheet_link_tag 'application', media: 'all'
-    = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
     = render 'peek/bar'
-    %header.navbar.navbar-default.navbar-static-top
-      %nav.container
-        %div.navbar-header
-          %a.navbar-brand(href='/') Betters
-        %div.navbar-collapse.collapse
-          %ul.nav.navbar-nav.navbar-right
-            - if user_signed_in?
-              %li= link_to current_user.email, edit_user_registration_path
-              %li= link_to t(:sign_out), destroy_user_session_path, method: :delete
-            - else
-              %li= link_to t(:sign_in), new_user_session_path
-              %li= link_to t(:sign_up), new_user_registration_path
+    = render 'layouts/header'
 
     %div.container
       - if notice
@@ -28,9 +16,5 @@
         %p= alert
       = yield
 
-    %footer.container
-      %div.row
-        %div.col-lg-12
-          %p
-            &copy; 2015 Made with &hearts;
-            %a(href='https://github.com/Tomohiro') @Tomohiro
+    = render 'layouts/footer'
+    = javascript_include_tag 'application'

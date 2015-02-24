@@ -2,9 +2,9 @@
   %div.col-lg-12
     %div.bs-component
       %div.jumbotron
-        %h1 Better Rails Base Project for Mine
+        %h1= t('app.site.description')
         %iframe(src="https://ghbtns.com/github-btn.html?user=Tomohiro&repo=betters&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px")
-        %p= link_to t(:sign_up), new_user_registration_path, class: 'btn btn-primary btn-lg'
+        %p= link_to t('app.views.session.sign_up'), new_user_registration_path, class: 'btn btn-primary btn-lg'
 
 %section
   %div.page-header
@@ -39,5 +39,5 @@
         %div.panel-body
           %ul
             %li Rails Assets
-            %li Bootstrap with Bootswatch
+            %li Bootstrap
             %li FontAwesome
