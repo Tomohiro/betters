@@ -1,7 +1,6 @@
 GIT
-  remote: git://github.com/Tomohiro/puma.git
-  revision: 542919771a249dbccda37c7fd636025c22778a06
-  branch: newrelic-dispatcher-default-update
+  remote: git://github.com/puma/puma.git
+  revision: 41825c7cd1b149c2843d6127e37dbd07262a91f3
   specs:
     puma (2.11.1)
       rack (>= 1.1, < 2.0)

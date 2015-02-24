@@ -8,7 +8,7 @@ gem 'rails', '4.2.0'
 gem 'pg'
 
 # Use Puma as the app server
-gem 'puma', git: 'git://github.com/Tomohiro/puma.git', branch: 'newrelic-dispatcher-default-update'
+gem 'puma', git: 'git://github.com/puma/puma.git'
 
 # Redis stores for Ruby on Rails (Cache, Session)
 gem 'redis-rails'
