@@ -19,4 +19,5 @@ en:
       session:
         sign_up: SIGN UP
         sign_in: LOGIN
-        sign_out: LOGOUT
+        sign_out: Logout
+        account: Config
