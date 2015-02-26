@@ -1,11 +1,11 @@
-Betters [![Join the chat at https://gitter.im/Tomohiro/betters](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Tomohiro/betters)
+Plate [![Join the chat at https://gitter.im/Tomohiro/plate](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Tomohiro/plate)
 ================================================================================
 
-[![Dependency Status](https://img.shields.io/gemnasium/Tomohiro/betters.svg?style=flat-square)](https://gemnasium.com/Tomohiro/betters)
-[![Build Status](https://img.shields.io/travis/Tomohiro/betters.svg?style=flat-square)](https://travis-ci.org/Tomohiro/betters)
-[![Coverage Status](https://img.shields.io/coveralls/Tomohiro/betters.svg?style=flat-square)](https://coveralls.io/r/Tomohiro/betters)
-[![Code Climate](https://img.shields.io/codeclimate/github/Tomohiro/betters.svg?style=flat-square)](https://codeclimate.com/github/Tomohiro/betters)
-[![Inline docs](http://inch-ci.org/github/Tomohiro/betters.svg?branch=master&style=flat-square)](http://inch-ci.org/github/Tomohiro/betters)
+[![Dependency Status](https://img.shields.io/gemnasium/Tomohiro/plate.svg?style=flat-square)](https://gemnasium.com/Tomohiro/plate)
+[![Build Status](https://img.shields.io/travis/Tomohiro/plate.svg?style=flat-square)](https://travis-ci.org/Tomohiro/plate)
+[![Coverage Status](https://img.shields.io/coveralls/Tomohiro/plate.svg?style=flat-square)](https://coveralls.io/r/Tomohiro/plate)
+[![Code Climate](https://img.shields.io/codeclimate/github/Tomohiro/plate.svg?style=flat-square)](https://codeclimate.com/github/Tomohiro/plate)
+[![Inline docs](http://inch-ci.org/github/Tomohiro/plate.svg?branch=master&style=flat-square)](http://inch-ci.org/github/Tomohiro/plate)
 
 
 ### Heroku Ready

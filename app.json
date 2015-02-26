@@ -1,9 +1,8 @@
 {
-  "name": "Betters",
-  "description": "Better Rails Base Project",
+  "name": "Plate",
+  "description": "Rails Boilerplate",
   "keywords": ["rails"],
-  "website": "https://betters.herokuapp.com",
-  "repository": "https://github.com/Tomohiro/betters",
+  "repository": "https://github.com/Tomohiro/plate",
   "addons": [
     "heroku-postgresql:hobby-dev",
     "newrelic:stark",

@@ -8,7 +8,7 @@
 en:
   layouts:
     application:
-      title: Betters
+      title: Plate
     header:
       features: Features
       about: About
@@ -20,4 +20,4 @@ en:
       account: Config
   landing:
     index:
-      description: My Rails Boilerplate
+      description: Plate - My Rails Boilerplate
