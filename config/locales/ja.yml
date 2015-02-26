@@ -1,0 +1,16 @@
+ja:
+  layouts:
+    application:
+      title: Plate
+    header:
+      features: 機能
+      about: 概要
+      pricing: 価格
+      blog: ブログ
+      sign_up: サインアップ
+      sign_in: ログイン
+      sign_out: ログアウト
+      account: アカウント設定
+  landing:
+    index:
+      description: Plate - My Rails Boilerplate
