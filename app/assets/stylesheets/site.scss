@@ -1,0 +1,35 @@
+@import 'bootstrap';
+
+header {
+  div.container {
+    padding-top: 20px;
+  }
+
+  nav li a {
+    text-transform: uppercase;
+  }
+
+  ul.navbar-right li.dropdown a {
+    text-transform: none;
+  }
+
+  button.navbar-toggle {
+    span.icon-bar {
+      background-color: #337AB7;
+    }
+  }
+}
+
+footer {
+  padding-bottom: 20px;
+
+  .fa-heart {
+    color: pink;
+  }
+}
+
+/* Overrides Rails form error style from alert styles of Bootstrap */
+#error_explanation {
+  @extend .alert;
+  @extend .alert-danger;
+}
