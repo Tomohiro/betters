@@ -6,18 +6,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app:
-    site:
+  layouts:
+    application:
       title: Betters
-      description: Better Rails Project for me
-    views:
-      landing:
-        features: FEATURES
-        about: ABOUT
-        pricing: PRICING
-        blog: BLOG
-      session:
-        sign_up: SIGN UP
-        sign_in: LOGIN
-        sign_out: Logout
-        account: Config
+    header:
+      features: Features
+      about: About
+      pricing: Pricing
+      blog: Blog
+      sign_up: Sign up
+      sign_in: Login
+      sign_out: Logout
+      account: Config
+  landing:
+    index:
+      description: My Rails Boilerplate
