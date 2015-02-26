@@ -1,5 +1,5 @@
 %header
-  %div.navbar.navbar-static-top
+  %div.navbar
     %div.container
       %div.navbar-header
         %button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#app-nav')
@@ -11,10 +11,10 @@
           %i.fa.fa-diamond
       %nav.collapse.navbar-collapse#app-nav
         %ul.nav.navbar-nav
-          %li= link_to t('app.views.landing.features')
-          %li= link_to t('app.views.landing.about')
-          %li= link_to t('app.views.landing.pricing')
-          %li= link_to t('app.views.landing.blog')
+          %li= link_to t('.features')
+          %li= link_to t('.about')
+          %li= link_to t('.pricing')
+          %li= link_to t('.blog')
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
             %li.dropdown
@@ -25,12 +25,12 @@
                 %li
                   = link_to edit_user_registration_path do
                     %i.fa.fa-gear
-                    = t('app.views.session.account')
+                    = t('.account')
                 %li
                   = link_to destroy_user_session_path, method: :delete do
                     %i.fa.fa-sign-out
-                    = t('app.views.session.sign_out')
+                    = t('.sign_out')
           - else
-            %li= link_to t('app.views.session.sign_in'), new_user_session_path
+            %li= link_to t('.sign_in'), new_user_session_path
             %li.divider-vertical
-            %li= link_to t('app.views.session.sign_up'), new_user_registration_path
+            %li= link_to t('.sign_up'), new_user_registration_path
