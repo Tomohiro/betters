@@ -1,0 +1,8 @@
+# Based on Devise locales.
+# https://github.com/tigrish/devise-i18n/blob/master/config/locales/en.yml
+en:
+  devise:
+    oauth_callbacks:
+      user:
+        failure: Could not authenticate you because "%{reason}".
+        success: Successfully authenticated account.

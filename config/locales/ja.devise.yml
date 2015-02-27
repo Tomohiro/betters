@@ -1,0 +1,8 @@
+# Based on Devise locales.
+# https://github.com/tigrish/devise-i18n/blob/master/config/locales/ja.yml
+ja:
+  devise:
+    oauth_callbacks:
+      user:
+        failure: '認証に失敗しました。理由：（%{reason}）'
+        success: '認証に成功しました。'
