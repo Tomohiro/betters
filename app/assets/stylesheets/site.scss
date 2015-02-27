@@ -1,5 +1,11 @@
 @import 'bootstrap';
 
+/* Overrides Rails form error style from alert styles of Bootstrap */
+#error_explanation {
+  @extend .alert;
+  @extend .alert-danger;
+}
+
 header {
   div.container {
     padding-top: 20px;
@@ -28,8 +34,7 @@ footer {
   }
 }
 
-/* Overrides Rails form error style from alert styles of Bootstrap */
-#error_explanation {
-  @extend .alert;
-  @extend .alert-danger;
+.btn-signup {
+  padding: 10px 20px;
+  border: 2px solid #337AB7;
 }
