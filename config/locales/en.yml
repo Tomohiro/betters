@@ -1,7 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
@@ -14,10 +10,17 @@ en:
       about: About
       pricing: Pricing
       blog: Blog
+      help: Help
       sign_up: Sign up
       sign_in: Login
       sign_out: Logout
       account: Config
+    footer:
+      company: Company
+      terms: Terms
+      privacy: Privacy
+      support: Support
+      contact: Contact
   landing:
     index:
       description: Plate - My Rails Boilerplate

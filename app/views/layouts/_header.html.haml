@@ -11,9 +11,11 @@
           %i.fa.fa-diamond
       %nav.collapse.navbar-collapse#app-nav
         %ul.nav.navbar-nav
-          %li= link_to t('.features')
-          %li= link_to t('.about')
-          %li= link_to t('.pricing')
+          - unless user_signed_in?
+            %li= link_to t('.features')
+            %li= link_to t('.about')
+            %li= link_to t('.pricing')
+          %li= link_to t('.help')
           %li= link_to t('.blog')
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?

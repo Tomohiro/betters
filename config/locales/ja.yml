@@ -1,0 +1,26 @@
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ja:
+  layouts:
+    application:
+      title: Plate
+    header:
+      features: 機能
+      about: 概要
+      pricing: 価格
+      blog: ブログ
+      help: ヘルプ
+      sign_up: サインアップ
+      sign_in: ログイン
+      sign_out: ログアウト
+      account: アカウント設定
+    footer:
+      company: 運営会社
+      terms: 利用規約
+      privacy: プライバシーポリシー
+      support: サポート
+      contact: お問い合わせ
+  landing:
+    index:
+      description: Plate - My Rails Boilerplate

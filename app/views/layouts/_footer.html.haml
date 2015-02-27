@@ -1,9 +1,33 @@
 %hr
 %footer
-  %div.text-center
+  %div.container.text-center
+    %ul.list-inline
+      %li
+        %iframe(src='https://ghbtns.com/github-btn.html?user=Tomohiro&repo=plate&type=star&count=true' frameborder='0' scrolling='0' width='90px' height='20px')
+      %li
+        %iframe(src='https://ghbtns.com/github-btn.html?user=Tomohiro&type=follow&count=true' frameborder='0' scrolling='0' width='170px' height='20px')
+      %li.follow-btn
+        %a.twitter-follow-button(href='https://twitter.com/Tomohiro' data-show-count='true') Follow @Tomohiro
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    %ul.list-inline
+      %li
+        %a(href='https://github.com/Tomohiro/plate')= t('.company')
+      %li &middot;
+      %li
+        %a(href='#')= t('.terms')
+      %li &middot;
+      %li
+        %a(href='#')= t('.privacy')
+      %li &middot;
+      %li
+        %a(href='#')= t('.support')
+      %li &middot;
+      %li
+        %a(href='#')= t('.contact')
     %p
       &copy;
       = Time.current.year
       Made with
       %i.fa.fa-heart
-      %a(href='https://github.com/Tomohiro') @Tomohiro
+      %a(href='https://tomohiro.me') Tomohiro
