@@ -12,22 +12,22 @@
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
     %ul.list-inline
       %li
-        %a(href='https://github.com/Tomohiro/plate')= t('.company')
+        = link_to t('.company'), 'https://github.com/Tomohiro/plate'
       %li &middot;
       %li
-        %a(href='#')= t('.terms')
+        = link_to t('.terms')
       %li &middot;
       %li
-        %a(href='#')= t('.privacy')
+        = link_to t('.privacy')
       %li &middot;
       %li
-        %a(href='#')= t('.support')
+        = link_to t('.support')
       %li &middot;
       %li
-        %a(href='#')= t('.contact')
+        = link_to t('.contact')
     %p
       &copy;
       = Time.current.year
       Made with
       %i.fa.fa-heart
-      %a(href='https://tomohiro.me') Tomohiro
+      = link_to 'Tomohiro', 'https://tomohiro.me'
