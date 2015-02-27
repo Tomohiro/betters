@@ -6,3 +6,12 @@ en:
       user:
         failure: Could not authenticate you because "%{reason}".
         success: Successfully authenticated account.
+    registrations:
+      new:
+        sign_up: 'Sign up'
+        email: 'Email'
+        password: 'Password'
+        password_confirm: 'Password Confirmation'
+        minimum_password_length: '%{count} characters minimum'
+        terms: 'Terms'
+        register: 'Register'

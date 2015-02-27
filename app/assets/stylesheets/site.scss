@@ -4,6 +4,10 @@
 #error_explanation {
   @extend .alert;
   @extend .alert-danger;
+
+  h2 {
+    font-size: 110% ;
+  }
 }
 
 header {
