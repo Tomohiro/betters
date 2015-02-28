@@ -26,9 +26,9 @@ ja:
       description: Plate - My Rails Boilerplate
   activerecord:
     models:
-      user: 'アカウント'
+      user: アカウント
     attributes:
       user:
-        email: 'メールアドレス'
-        password: 'パスワード'
-        password_confirmation: 'パスワード(確認)'
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(確認)

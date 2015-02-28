@@ -1,17 +1,24 @@
 # Based on Devise locales.
 # https://github.com/tigrish/devise-i18n/blob/master/config/locales/ja.yml
+
 ja:
   devise:
+    labels: &devise_common_labels
+      sign_up: サインアップ
+      sign_in: ログイン
+      email: メールアドレス
+      password: パスワード
+      password_confirm: パスワード(確認)
+      minimum_password_length: '%{count}文字以上'
     oauth_callbacks:
       user:
         failure: '認証に失敗しました。理由：（%{reason}）'
-        success: '認証に成功しました。'
+        success: 認証に成功しました。
     registrations:
       new:
-        sign_up: 'サインアップ'
-        email: 'メールアドレス'
-        password: 'パスワード'
-        password_confirm: 'パスワード(確認)'
-        minimum_password_length: '%{count}文字以上'
-        terms: '利用規約'
-        register: '利用規約に同意して登録'
+        <<: *devise_common_labels
+        terms: 利用規約
+        register: 利用規約に同意して登録
+    sessions:
+      new:
+        <<: *devise_common_labels

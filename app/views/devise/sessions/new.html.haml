@@ -1,0 +1,16 @@
+.row
+  .col-lg-4.col-lg-offset-4
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .panel.panel-info
+        .panel-heading
+          %h3= t('.sign_in')
+        .panel-body
+          .form-group
+            = f.label t('.email')
+            = f.email_field :email, autofocus: true, class: 'form-control'
+          .form-group
+            = f.label t('.password')
+            = f.password_field :password, autocomplete: 'off', class: 'form-control'
+          .text-right
+            = f.submit t('.sign_in'), class: 'btn btn-primary'
+          = render 'devise/shared/oauth_links'
