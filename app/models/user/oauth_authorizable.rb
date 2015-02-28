@@ -3,8 +3,7 @@ class User
   module OAuthAuthorizable
     extend ActiveSupport::Concern
 
-    # ClassMethods defines OAuth authorization processes
-    module ClassMethods
+    class_methods do
       def oauth_authorize(auth)
         identity = Identity.find_or_create_with_oauth(auth)
 
