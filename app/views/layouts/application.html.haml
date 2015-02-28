@@ -10,14 +10,14 @@
     = render 'peek/bar'
     = render 'layouts/header'
 
-    %div.container
+    .container
       - if notice
-        %div.alert.alert-success.alert-dismissable(role='alert')
+        .alert.alert-success.alert-dismissable(role='alert')
           %button.close(data-dismiss='alert' aria-label='Close')
             %span(aria-hidden='true') &times;
           %p= notice
       - if alert
-        %div.alert.alert-danger.alert-dismissable(role='alert')
+        .alert.alert-danger.alert-dismissable(role='alert')
           %button.close(data-dismiss='alert' aria-label='Close')
             %span(aria-hidden='true') &times;
           %p= alert
