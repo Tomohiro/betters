@@ -1,28 +1,33 @@
 !!!
 %html
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: 'UTF-8'}
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
+    %meta{content: 'IE=Edge', 'http-equiv' => 'X-UA-Compatible'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
-    %title= t('.title')
+    %title= t('layouts.application.title')
     = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
   %body
     = render 'peek/bar'
     = render 'layouts/header'
 
-    .container
-      - if notice
-        .alert.alert-success.alert-dismissable(role='alert')
-          %button.close(data-dismiss='alert' aria-label='Close')
-            %span(aria-hidden='true') &times;
-          %p= notice
-      - if alert
-        .alert.alert-danger.alert-dismissable(role='alert')
-          %button.close(data-dismiss='alert' aria-label='Close')
-            %span(aria-hidden='true') &times;
-          %p= alert
+    - if content_for? :content
+      = yield :content
+    - else
+      .container
+        - if notice
+          .alert.alert-success.alert-dismissable(role='alert')
+            %button.close(data-dismiss='alert' aria-label='Close')
+              %span(aria-hidden='true') &times;
+            %p= notice
+        - if alert
+          .alert.alert-danger.alert-dismissable(role='alert')
+            %button.close(data-dismiss='alert' aria-label='Close')
+              %span(aria-hidden='true') &times;
+            %p= alert
 
-      = yield
+        = yield
 
     = render 'layouts/footer'
     = javascript_include_tag 'application'

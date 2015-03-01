@@ -11,11 +11,19 @@
 }
 
 header {
-  div.container {
-    padding-top: 20px;
+  .container {
+    padding-top: 10px;
   }
 
-  nav li a {
+  .navbar-brand {
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: #337ab7;
+    color: #fff;
+    border-radius: 2px;
+  }
+
+  nav li {
     text-transform: uppercase;
   }
 
@@ -25,7 +33,7 @@ header {
 
   button.navbar-toggle {
     span.icon-bar {
-      background-color: #337AB7;
+      background-color: #337ab7;
     }
   }
 }
@@ -34,11 +42,19 @@ footer {
   padding-bottom: 20px;
 
   .fa-heart {
-    color: pink;
+    color: #ef7ab3;
   }
 }
 
-.btn-signup {
-  padding: 10px 20px;
-  border: 2px solid #337AB7;
+#landing-header {
+  .jumbotron {
+    color: #fff;
+    background-color: #337ab7;
+  }
+
+  .btn-signup {
+    padding-top: 10px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+  }
 }
