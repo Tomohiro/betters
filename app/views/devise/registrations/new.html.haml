@@ -7,6 +7,9 @@
           %h3= t('.sign_up')
         .panel-body
           .form-group
+            = f.label t('.username')
+            = f.text_field :username, autofocus: true, class: 'form-control'
+          .form-group
             = f.label t('.email')
             = f.email_field :email, autofocus: true, class: 'form-control'
           .form-group

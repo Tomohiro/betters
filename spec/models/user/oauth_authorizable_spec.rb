@@ -13,6 +13,7 @@ describe User::OAuthAuthorizable do
           provider: 'github',
           uid: 'BRUCE_GITHUB_UID',
           info: {
+            nickname: 'bruce',
             email: 'bruce@example.com'
           }
         )
@@ -30,7 +31,7 @@ describe User::OAuthAuthorizable do
         OmniAuth::AuthHash.new(
           provider: 'dummy_provider',
           uid: 'NEW_USER_DUMMY_PROVIDER_UID',
-          info: { email: 'new_user@example.com' }
+          info: { nickname: 'new_user', email: 'new_user@example.com' }
         )
       end
 
