@@ -1,5 +1,7 @@
 clark_kent:
+  username: clark
   email: clark@example.com
 
 bruce_wayne:
+  username: bruce
   email: bruce@example.com
