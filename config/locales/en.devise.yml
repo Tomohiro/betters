@@ -6,6 +6,7 @@ en:
     labels: &devise_common_labels
       sign_in: Sign in
       sign_up: Sign up
+      username: Username
       email: Email
       password: Password
     oauth_callbacks:

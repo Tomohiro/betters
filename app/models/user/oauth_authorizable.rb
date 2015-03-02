@@ -17,7 +17,11 @@ class User
       end
 
       def create_from_oauth(auth)
-        user = User.new(email: auth.info.email, password: dummy_password)
+        user = User.new(
+          username: auth.info.nickname,
+          email: auth.info.email,
+          password: dummy_password
+        )
         user.skip_confirmation!
         user.save!
         user
