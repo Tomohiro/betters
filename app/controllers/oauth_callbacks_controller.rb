@@ -2,16 +2,12 @@
 class OAuthCallbacksController < Devise::OmniauthCallbacksController
   rescue_from ActiveRecord::RecordInvalid, with: :unauthorized
 
-  def auth
-    request.env['omniauth.auth']
-  end
-
   def authorize
     provider = auth.provider
 
     user = User.oauth_authorize(auth)
     if user.oauth_authorized?(provider)
-      authorized(user, provider)
+      authorized(user)
     else
       unauthorized(provider)
     end
@@ -23,10 +19,12 @@ class OAuthCallbacksController < Devise::OmniauthCallbacksController
 
   private
 
-  def authorized(user, provider)
-    if is_navigational_format?
-      set_flash_message(:notice, :success, kind: provider)
-    end
+  def auth
+    request.env['omniauth.auth']
+  end
+
+  def authorized(user)
+    set_flash_message(:notice, :success) if is_navigational_format?
     sign_in_and_redirect user, event: :authentication
   end
 
