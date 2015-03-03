@@ -9,8 +9,8 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true
   validates :username, uniqueness: { case_sensitive: false }
-  validates :username, length: 1..15
-  validates :username, format: { without: /[!-\/\@\^\~\`\(\)\[\]\>\<\=]/ }
+  validates :username, length: 1..32
+  validates :username, format: { with: /\A[\w\-\.]+\z/ }
 
   # Include default devise modules.
   devise :database_authenticatable, :registerable,
