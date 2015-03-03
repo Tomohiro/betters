@@ -1,16 +1,16 @@
 class User
-  # OAuthAuthrorizable registers the authorized user
+  # OAuthAuthrorizable creates the connection of the authorized user
   module OAuthAuthorizable
     extend ActiveSupport::Concern
 
     class_methods do
       def oauth_authorize(auth)
-        identity = Identity.find_or_create_with_oauth(auth)
+        connection = Connection.find_or_create_with_oauth(auth)
 
-        user = identity.user
+        user = connection.user
         if user.nil?
           user = create_from_oauth(auth)
-          user.identities << identity
+          user.connections << connection
         end
 
         user
@@ -19,7 +19,7 @@ class User
       def create_from_oauth(auth)
         user = User.new(
           username: auth.info.nickname,
-          email: auth.info.email,
+          email:    auth.info.email,
           password: dummy_password
         )
         user.skip_confirmation!
@@ -33,7 +33,7 @@ class User
     end
 
     def oauth_authorized?(provider)
-      identities.find_by(provider: provider).present? && persisted?
+      connections.find_by(provider: provider).present? && persisted?
     end
   end
 end

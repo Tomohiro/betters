@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150218123723) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "identities", force: :cascade do |t|
+  create_table "connections", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "provider"
     t.string   "uid"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20150218123723) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "identities", ["uid", "provider"], name: "index_identities_on_uid_and_provider", unique: true, using: :btree
-  add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
+  add_index "connections", ["uid", "provider"], name: "index_connections_on_uid_and_provider", unique: true, using: :btree
+  add_index "connections", ["user_id"], name: "index_connections_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               default: "", null: false
@@ -56,5 +56,5 @@ ActiveRecord::Schema.define(version: 20150218123723) do
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-  add_foreign_key "identities", "users"
+  add_foreign_key "connections", "users"
 end

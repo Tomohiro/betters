@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe User::OAuthAuthorizable do
-  fixtures :users, :identities
+  fixtures :users, :connections
 
   # Create an OAuth provider's hash by OmniAuth::AuthHash
   # Integration Testing intridea/omniauth Wiki
@@ -19,10 +19,10 @@ describe User::OAuthAuthorizable do
         )
       end
 
-      subject { User.oauth_authorize(valid_github_auth_hash).identities }
+      subject { User.oauth_authorize(valid_github_auth_hash).connections }
 
       it 'was authorized the user' do
-        expect(subject.find_by(provider: 'github')).to be_instance_of(Identity)
+        expect(subject.find_by(provider: 'github')).to be_instance_of Connection
       end
     end
 
@@ -41,8 +41,8 @@ describe User::OAuthAuthorizable do
         expect(subject.persisted?).to be true
       end
 
-      it 'has identities' do
-        expect(subject.identities.present?).to be true
+      it 'has connections' do
+        expect(subject.connections.present?).to be true
       end
     end
   end

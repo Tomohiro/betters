@@ -1,6 +1,6 @@
-class CreateIdentities < ActiveRecord::Migration
+class CreateConnections < ActiveRecord::Migration
   def change
-    create_table :identities do |t|
+    create_table :connections do |t|
       t.references :user, index: true
       t.string :provider
       t.string :uid
@@ -8,7 +8,7 @@ class CreateIdentities < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_foreign_key :identities, :users
-    add_index :identities, [:uid, :provider], unique: true
+    add_foreign_key :connections, :users
+    add_index :connections, [:uid, :provider], unique: true
   end
 end

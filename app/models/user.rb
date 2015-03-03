@@ -1,6 +1,6 @@
 # User represents an user's domain
 class User < ActiveRecord::Base
-  has_many :identities, dependent: :destroy
+  has_many :connections, dependent: :destroy
 
   # @param [String] username the unique name of user
   scope :find_by_username, -> (username) do
