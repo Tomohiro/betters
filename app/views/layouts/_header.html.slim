@@ -1,0 +1,38 @@
+header
+  .navbar
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed type='button' data-toggle='collapse' data-target='#app-nav'
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand href='/'
+          i.fa.fa-diamond
+      nav.collapse.navbar-collapse#app-nav
+        ul.nav.navbar-nav
+          - unless user_signed_in?
+            li = link_to t('.features')
+            li = link_to t('.about')
+            li = link_to t('.pricing')
+          li = link_to t('.help')
+          li = link_to t('.blog')
+        ul.nav.navbar-nav.navbar-right
+          - if user_signed_in?
+            li.dropdown
+              a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-expanded='false'
+                = current_user.username
+                span.caret
+              ul.dropdown-menu role='menu'
+                li
+                  = link_to edit_user_registration_path do
+                    i.fa.fa-gear
+                    = t('.account')
+                li
+                  = link_to destroy_user_session_path, method: :delete do
+                    i.fa.fa-sign-out
+                    = t('.sign_out')
+          - else
+            li = link_to t('.sign_in'), new_user_session_path
+            li.divider-vertical
+            li = link_to t('.sign_up'), new_user_registration_path

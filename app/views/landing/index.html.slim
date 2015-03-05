@@ -1,0 +1,45 @@
+#landing-header
+  .jumbotron.text-center
+    h1 = t('.description')
+    p
+      | This is the Rails boilerplate for me.
+      | Including authentication, OAuth connection, responsive design, and multi locales.
+    p = link_to t('layouts.header.sign_up'), new_user_registration_path, class: 'btn btn-signup btn-lg'
+
+.container
+  section
+    .page-header
+      .row
+        .col-lg-12
+          h2 Stacks
+    .row
+      .col-md-4
+        .panel.panel-info
+          .panel-heading
+            h3.panel-title Web Application Framework
+          .panel-body
+            ul
+              li Ruby 2.2
+              li Ruby on Rails 4.2
+              li Devise 3.4
+              li Omniauth 1.2
+      .col-md-4
+        .panel.panel-info
+          .panel-heading
+            h3.panel-title Backend
+          .panel-body
+            ul
+              li Heroku
+              li Heroku Postgres
+              li RedisCloud
+              li SendGrid
+      .col-md-4
+        .panel.panel-info
+          .panel-heading
+            h3.panel-title Frontend
+          .panel-body
+            ul
+              li Slim
+              li Rails Assets
+              li Bootstrap
+              li FontAwesome

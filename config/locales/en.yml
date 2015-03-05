@@ -24,3 +24,15 @@ en:
   landing:
     index:
       description: Plate - My Rails Boilerplate
+  users:
+    show:
+      profile: Profile
+  activerecord:
+    models:
+      user: Account
+    attributes:
+      user:
+        username: Username
+        email: Email
+        password: Password
+        password_confirmation: Password Confirmation

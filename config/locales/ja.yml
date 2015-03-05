@@ -24,11 +24,15 @@ ja:
   landing:
     index:
       description: Plate - My Rails Boilerplate
+  users:
+    show:
+      profile: プロフィール
   activerecord:
     models:
       user: アカウント
     attributes:
       user:
+        username: ユーザ名
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード(確認)
