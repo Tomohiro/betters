@@ -1,0 +1,33 @@
+hr
+footer
+  .container.text-center
+    ul.list-inline
+      li
+        iframe src='https://ghbtns.com/github-btn.html?user=Tomohiro&repo=plate&type=star&count=true' frameborder='0' scrolling='0' width='90px' height='20px'
+      li
+        iframe src='https://ghbtns.com/github-btn.html?user=Tomohiro&type=follow&count=true' frameborder='0' scrolling='0' width='170px' height='20px'
+      li.follow-btn
+        a.twitter-follow-button href='https://twitter.com/Tomohiro' data-show-count='true' Follow @Tomohiro
+        javascript:
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    ul.list-inline
+      li
+        = link_to t('.company'), 'https://github.com/Tomohiro/plate'
+      li &middot;
+      li
+        = link_to t('.terms')
+      li &middot;
+      li
+        = link_to t('.privacy')
+      li &middot;
+      li
+        = link_to t('.support')
+      li &middot;
+      li
+        = link_to t('.contact')
+    p
+      | &copy;
+      = Time.current.year
+      | Made with
+      i.fa.fa-heart
+      = link_to 'Tomohiro', 'https://tomohiro.me'

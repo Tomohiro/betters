@@ -1,0 +1,9 @@
+h2 = t('.profile')
+
+table.table
+  tr
+    th = User.human_attribute_name(:username)
+    td = @user.username
+  tr
+    th = User.human_attribute_name(:email)
+    td = @user.email

@@ -23,3 +23,6 @@ ja:
     sessions:
       new:
         <<: *devise_common_labels
+    shared:
+      oauth_links:
+        <<: *devise_common_labels

@@ -25,8 +25,8 @@ gem 'omniauth-facebook', '~> 2.0.0'
 gem 'rails-i18n',  '~> 4.0.0'
 gem 'devise-i18n', '~> 0.10'
 
-# Use haml as view template
-gem 'haml-rails', '~> 0.8'
+# Use Slim as view template
+gem 'slim'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

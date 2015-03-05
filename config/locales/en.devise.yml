@@ -4,11 +4,13 @@
 en:
   devise:
     labels: &devise_common_labels
-      sign_in: Sign in
+      sign_in: Login
       sign_up: Sign up
       username: Username
       email: Email
       password: Password
+      password_confirm: Password Confirmation
+      minimum_password_length: '%{count} characters minimum'
     oauth_callbacks:
       user:
         failure: Could not authenticate you because "%{reason}".
@@ -16,10 +18,11 @@ en:
     registrations:
       new:
         <<: *devise_common_labels
-        password_confirm: Password Confirmation
-        minimum_password_length: '%{count} characters minimum'
         terms: Terms
         register: Register
     sessions:
       new:
+        <<: *devise_common_labels
+    shared:
+      oauth_links:
         <<: *devise_common_labels
