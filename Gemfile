@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.2'
+gem 'rails', '~> 4.2.5.1'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -14,7 +14,7 @@ gem 'puma', git: 'git://github.com/puma/puma.git'
 gem 'redis-rails'
 
 # Use Devise as authentication users
-gem 'devise', '~> 3.4'
+gem 'devise', '>= 3.5.4'
 
 # Support OAuth providers
 gem 'omniauth', '~> 1.2.2'
@@ -32,7 +32,7 @@ gem 'slim'
 gem 'sass-rails', '~> 5.0'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 2.7.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
@@ -120,3 +120,5 @@ group :production do
   # Management performance of Rails application
   gem 'newrelic_rpm'
 end
+gem 'nokogiri', '>= 1.6.7.2'
+gem 'rails-html-sanitizer', '~> 1.0.3'
