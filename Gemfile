@@ -8,7 +8,7 @@ gem 'rails', '~> 4.2.5'
 gem 'pg'
 
 # Use Puma as the app server
-gem 'puma', git: 'git://github.com/puma/puma.git'
+gem 'puma'
 
 # Redis stores for Ruby on Rails (Cache, Session)
 gem 'redis-rails'
